@@ -1,4 +1,5 @@
 import "./Layout.css";
+import "../../Components/componentStyles.css";
 
 import lupa from "../../Pics/lupa.jpg";
 import atom from "../../Pics/atom.jpg";
@@ -29,10 +30,10 @@ export const Layout = ({ contentComponent }) => {
       <NavigaceHorizontalni />
       <div className="content">
         <NavigaceVertikalni />
-        {contentComponent}
+        <div className="contentMain">{contentComponent}</div>
       </div>
       <footer>
-        <h4>Pokud mate pripominky, napady nebo jste nasli nefunkcni odkaz, prosim napište na veronika.kovarova@pirati.cz</h4>
+        <h4>Pokud máte připomínky, nápady nebo jste našli nefunkční odkaz, prosím napište na veronika.kovarova@pirati.cz</h4>
       </footer>
     </main>
   );

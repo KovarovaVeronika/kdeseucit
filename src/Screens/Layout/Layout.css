@@ -35,6 +35,12 @@ h2 {
 .content {
     display: flex;
     flex-direction: row;
+    align-items: flex-start;
+}
+
+.contentMain {
+    flex: 1;
+    min-width: 0;
 }
 
 main {
