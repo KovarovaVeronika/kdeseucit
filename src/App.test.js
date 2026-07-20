@@ -20,13 +20,14 @@ test('renders resource page cards', () => {
   expect(screen.getByRole('link', { name: /skolakov/i })).toBeInTheDocument()
 })
 
-test('renders nav hub page links', () => {
+test('renders nav hub submenu in sidebar', () => {
   render(
     <MemoryRouter initialEntries={['/predmety']}>
       <App />
     </MemoryRouter>
   )
-  expect(screen.getByText('ČESKÝ JAZYK')).toBeInTheDocument()
+  expect(screen.getByRole('button', { name: /školní předměty/i })).toBeInTheDocument()
+  expect(screen.getByRole('link', { name: /český jazyk/i })).toBeInTheDocument()
 })
 
 test('renders hybrid page header and cards', () => {

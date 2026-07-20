@@ -9,7 +9,7 @@ const renderPageContent = (page) => {
     case 'hero':
       return <HeroImage image={page.image} alt={page.alt} />
     case 'nav':
-      return <SectionNav links={page.links} />
+      return null
     case 'hybrid':
       return (
         <>

@@ -1,3 +1,8 @@
+import predmety from './pages/predmety'
+import jazyky from './pages/jazyky'
+import umelecke from './pages/umelecke'
+import pohyb from './pages/pohyb'
+
 export const horizontalNav = [
   { to: '/predskolaci', label: 'PŘEDŠKOLÁCI' },
   { to: '/prvnitrida', label: '1. TŘÍDA', classText: ' TŘÍDA', prefix: '1.' },
@@ -16,12 +21,12 @@ export const horizontalNav = [
 ]
 
 export const verticalNav = [
-  { to: '/predmety', label: 'ŠKOLNÍ PŘEDMĚTY' },
-  { to: '/jazyky', label: 'CIZÍ JAZYKY' },
-  { to: '/alternativni', label: 'ALTERNATIVNÍ ZPŮSOB VZDELÁVÁNÍ' },
+  { to: '/predmety', label: 'ŠKOLNÍ PŘEDMĚTY', children: predmety.links },
+  { to: '/jazyky', label: 'CIZÍ JAZYKY', children: jazyky.links },
+  { to: '/alternativni', label: 'ALTERNATIVNÍ ZPŮSOB VZDĚLÁVÁNÍ' },
   { to: '/rozsirujici', label: 'ROZŠIŘUJÍCÍ UČIVO' },
-  { to: '/umelecke', label: 'UMĚLECKÉ PŘEDMĚTY' },
-  { to: '/pohyb', label: 'POHYBOVÉ AKTIVITY' },
+  { to: '/umelecke', label: 'UMĚLECKÉ PŘEDMĚTY', children: umelecke.links },
+  { to: '/pohyb', label: 'POHYBOVÉ AKTIVITY', children: pohyb.links },
   { to: '/knihovny', label: 'KNIHOVNY ARCHÍVY' },
   { to: '/kulturni', label: 'KULTURNÍ INSTITUCE' },
 ]

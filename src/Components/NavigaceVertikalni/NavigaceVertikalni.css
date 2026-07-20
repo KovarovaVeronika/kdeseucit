@@ -1,9 +1,15 @@
 .NavigaceVertikalniKontejner {
-    width: 10%;
-    height: 200px;
+    width: 12%;
+    min-width: 120px;
     display: flex;
     flex-direction: column;
     z-index: 2;
+    flex-shrink: 0;
+}
+
+.verNavItem {
+    display: flex;
+    flex-direction: column;
 }
 
 .verButton {
@@ -14,14 +20,53 @@
     font-weight: 500;
     font-size: clamp(10px, 2vw, 30px);
     min-width: 60px;
-    padding: 2px;
+    padding: 2px 4px;
     margin: 2% 0;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-.verButton:hover {
+.verButtonParent {
+    justify-content: center;
+}
+
+.verButton:hover,
+.verButtonOpen {
     box-shadow: 0 0 20px darkgrey;
+}
+
+.verButtonActive {
+    box-shadow: 0 0 20px darkgrey;
+}
+
+.verSubMenu {
+    display: flex;
+    flex-direction: column;
+    margin: -1% 0 2% 0;
+}
+
+.verSubButton {
+    color: black;
+    text-decoration: none;
+    background-color: white;
+    font-family: 'BN-normal', cursive;
+    font-weight: 500;
+    font-size: clamp(8px, 1.4vw, 18px);
+    padding: 4px 6px;
+    margin: 2px 0;
+    text-align: left;
+    border: 2px solid black;
+    line-height: 1.2;
+}
+
+.verSubButton:hover,
+.verSubButtonActive {
+    box-shadow: 0 0 10px darkgrey;
+    background-color: #f0f0f0;
 }
