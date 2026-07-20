@@ -42,6 +42,8 @@ h2 {
 .contentMain {
     flex: 1;
     min-width: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 main {
